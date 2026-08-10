@@ -1,0 +1,66 @@
+# ==========================================
+# 排除：第三方教程仓库内容（只保留 C9 配置和数据）
+# ==========================================
+all-in-rag/code/
+all-in-rag/docs/
+all-in-rag/Extra-chapter/
+all-in-rag/models/
+all-in-rag/.github/
+all-in-rag/.gitignore
+all-in-rag/data/C1/
+all-in-rag/data/C2/
+all-in-rag/data/C3/
+all-in-rag/data/C4/
+all-in-rag/data/C8/
+all-in-rag/data/C9/volumes/
+
+# ==========================================
+# 排除：前端构建产物和依赖
+# ==========================================
+What-to-eat-today/frontend/node_modules/
+What-to-eat-today/frontend/.next/
+What-to-eat-today/frontend/out/
+
+# ==========================================
+# 排除：Python 缓存和虚拟环境
+# ==========================================
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+.eggs/
+*.egg
+
+# ==========================================
+# 排除：密钥文件（使用 .env.example 代替）
+# ==========================================
+.env
+What-to-eat-today/.env
+What-to-eat-today/frontend/.env.local
+
+# ==========================================
+# 排除：截图和二进制文件
+# ==========================================
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.bmp
+*.ico
+
+# ==========================================
+# 排除：IDE 和系统文件
+# ==========================================
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# ==========================================
+# 排除：杂项
+# ==========================================
+1.86.0
+*.log
+.env
