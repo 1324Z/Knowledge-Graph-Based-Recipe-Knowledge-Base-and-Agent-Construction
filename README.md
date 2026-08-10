@@ -161,6 +161,10 @@ npm run dev
 
 **最终规模**：323 菜谱 / 2906 食材 / 2514 烹饪步骤 / 多种关系类型。
 
+![Neo4j 菜谱知识图谱](screenshots/05_neo4j_graph.png)
+
+> Neo4j Browser 中的局部图谱：紫色节点表示菜谱，橙色节点表示食材，连线展示菜谱所需食材及菜谱间的相似关系。
+
 ### 3.2 知识块生成
 
 知识图谱中的结构化数据无法直接用于向量检索，需要将其转换为文本知识块。核心流程分为两步：**文档拼装**和**语义切割**。
@@ -253,6 +257,10 @@ ef：64（查询时搜索宽度）
 ```
 
 **存算分离架构**：Milvus standalone 模式下，计算层（milvus-standalone）无状态，元数据层（milvus-etcd）管理集合/分段/索引配置，存储层（milvus-minio）持久化向量数据和 HNSW 索引文件。三者通过 Docker Compose 编排。
+
+![MinIO 向量数据存储](screenshots/06_minio_storage.png)
+
+> MinIO Object Browser 中保存了 Milvus 生成的分段数据与索引文件，为向量知识库提供持久化对象存储。
 
 ## 四、检索层：多路混合检索
 
