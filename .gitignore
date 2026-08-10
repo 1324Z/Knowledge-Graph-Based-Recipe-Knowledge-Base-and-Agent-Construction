@@ -39,9 +39,10 @@ What-to-eat-today/.env
 What-to-eat-today/frontend/.env.local
 
 # ==========================================
-# 排除：截图和二进制文件
+# 排除：截图和二进制文件（项目文档截图除外）
 # ==========================================
 *.png
+!screenshots/*.png
 *.jpg
 *.jpeg
 *.gif
