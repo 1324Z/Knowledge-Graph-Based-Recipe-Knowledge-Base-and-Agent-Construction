@@ -6,7 +6,7 @@
 
 - **知识图谱**：Neo4j 5.18 + APOC（323 菜谱 / 2906 食材 / 2514 烹饪步骤）
 - **向量数据库**：Milvus v2.5.11（1138 个知识块，512 维 BGE 嵌入，HNSW 索引）
-- **后端**：Flask（端口 8001），SSE 流式输出，语义缓存，多轮上下文
+- **后端**：Flask（本地开发端口 8002），SSE 流式输出，语义缓存，多轮上下文
 - **前端**：Next.js 14 + React 18 + TypeScript + Tailwind CSS + Zustand
 - **嵌入模型**：BAAI/bge-small-zh-v1.5（本地部署）
 - **LLM**：OpenAI 兼容 API（gpt-5.4）
@@ -20,6 +20,7 @@ conda create -n cook-rag python=3.12
 conda activate cook-rag
 pip install -r requirements.txt
 ```
+cook-rag（本机环境）
 
 ### 2. 配置
 
@@ -56,7 +57,7 @@ npm run dev
 ### 6. 访问地址
 
 - 前端：http://localhost:3000
-- 后端 API：http://localhost:8001
+- 后端 API：http://localhost:8002
 - Neo4j Browser：http://localhost:7474
 - MinIO Console：http://localhost:9003
 
@@ -105,7 +106,7 @@ npm run dev
 └──────────────────────────┬──────────────────────────────────────┘
                            │ HTTP / SSE
 ┌──────────────────────────▼──────────────────────────────────────┐
-│                      服务层 (Flask 8001)                      │
+│                      服务层 (Flask 8002)                      │
 │    语义缓存 → 查询路由 → 混合检索 → 流式生成 → SSE 推送            │
 └──┬───────────┬───────────────────┬──────────────────┬────────┘
    │           │                   │                  │
@@ -549,7 +550,7 @@ const statusTextMap: Record<string, string> = {
          │                    │
          ▼                    ▼
 ┌─────────────────┐  ┌─────────────────┐
-│ Flask 后端 8001 │  │ Next.js 3000    │
+│ Flask 后端 8002 │  │ Next.js 3000    │
 │ (conda env)     │  │ (npm run dev)   │
 └─────────────────┘  └─────────────────┘
 ```

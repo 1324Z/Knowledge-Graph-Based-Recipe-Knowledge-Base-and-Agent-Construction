@@ -26,6 +26,7 @@ from dotenv import load_dotenv
 # 加载环境变量
 # 需要在加载GraphRAGConfig执行调用load_dotenv()
 load_dotenv(override=True)
+WEB_PORT = int(os.getenv("WEB_PORT", "8002"))
 
 from config import DEFAULT_CONFIG, GraphRAGConfig
 from rag_modules import (
@@ -349,16 +350,16 @@ class AdvancedGraphRAGSystem:
                 return
 
             print("🚀 启动Web服务...")
-            print(f"📊 健康检查: http://localhost:8001/health")
-            print(f"💬 聊天API: http://localhost:8001/api/chat")
-            print(f"🌊 流式聊天: http://localhost:8001/api/chat/stream")
-            print(f"🍽️ 菜谱推荐: http://localhost:8001/api/recipes/recommendations")
-            print(f"📖 菜谱详情: http://localhost:8001/api/recipes/<recipe_id>")
-            print(f"📈 统计信息: http://localhost:8001/api/stats")
+            print(f"📊 健康检查: http://localhost:{WEB_PORT}/health")
+            print(f"💬 聊天API: http://localhost:{WEB_PORT}/api/chat")
+            print(f"🌊 流式聊天: http://localhost:{WEB_PORT}/api/chat/stream")
+            print(f"🍽️ 菜谱推荐: http://localhost:{WEB_PORT}/api/recipes/recommendations")
+            print(f"📖 菜谱详情: http://localhost:{WEB_PORT}/api/recipes/<recipe_id>")
+            print(f"📈 统计信息: http://localhost:{WEB_PORT}/api/stats")
             print("=" * 50)
 
             # 启动Flask应用
-            app.run(host='0.0.0.0', port=8001, debug=False)
+            app.run(host='0.0.0.0', port=WEB_PORT, debug=False)
 
         except Exception as e:
             logger.error(f"Web服务启动失败: {e}")
