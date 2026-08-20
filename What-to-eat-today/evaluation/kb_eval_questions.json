@@ -1,0 +1,72 @@
+[
+  {
+    "id": "ingredient_egg_simple",
+    "category": "ingredient_lookup",
+    "question": "鸡蛋有哪些简单做法？",
+    "expected_terms": ["鸡蛋", "蒸", "煮"],
+    "required_terms": ["鸡蛋"]
+  },
+  {
+    "id": "recipe_braised_pork_steps",
+    "category": "recipe_steps",
+    "question": "红烧肉怎么做？",
+    "expected_terms": ["红烧肉", "五花肉", "生抽", "老抽", "冰糖"],
+    "required_terms": ["红烧肉", "五花肉"]
+  },
+  {
+    "id": "ingredient_potato_beef",
+    "category": "ingredient_reasoning",
+    "question": "土豆和牛肉能做什么菜？",
+    "expected_terms": ["土豆", "牛肉", "炖"],
+    "required_terms": ["土豆", "牛肉"]
+  },
+  {
+    "id": "breakfast_recommendation",
+    "category": "category_recommendation",
+    "question": "推荐几个适合早餐的菜。",
+    "expected_terms": ["早餐", "鸡蛋", "粥", "三明治"],
+    "required_terms": ["早餐"]
+  },
+  {
+    "id": "fish_steaming",
+    "category": "recipe_steps",
+    "question": "清蒸鲈鱼的步骤是什么？",
+    "expected_terms": ["清蒸鲈鱼", "姜", "葱", "蒸"],
+    "required_terms": ["清蒸鲈鱼"]
+  },
+  {
+    "id": "vegetarian_easy",
+    "category": "category_recommendation",
+    "question": "有哪些简单的素菜推荐？",
+    "expected_terms": ["素菜", "简单", "炒"],
+    "required_terms": ["素菜"]
+  },
+  {
+    "id": "eggplant_recipe",
+    "category": "ingredient_lookup",
+    "question": "茄子可以做哪些菜？",
+    "expected_terms": ["茄子", "肉末", "炒"],
+    "required_terms": ["茄子"]
+  },
+  {
+    "id": "soup_recommendation",
+    "category": "category_recommendation",
+    "question": "想喝汤，有什么菜谱？",
+    "expected_terms": ["汤", "炖", "排骨"],
+    "required_terms": ["汤"]
+  },
+  {
+    "id": "chicken_relation",
+    "category": "ingredient_reasoning",
+    "question": "鸡肉相关的家常菜有哪些？",
+    "expected_terms": ["鸡", "家常", "宫保"],
+    "required_terms": ["鸡"]
+  },
+  {
+    "id": "quick_home_cooking",
+    "category": "general_recommendation",
+    "question": "推荐几个做起来快的家常菜。",
+    "expected_terms": ["家常", "简单", "分钟"],
+    "required_terms": ["家常"]
+  }
+]

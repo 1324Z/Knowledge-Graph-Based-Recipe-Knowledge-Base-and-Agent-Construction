@@ -61,6 +61,23 @@ npm run dev
 - Neo4j Browser：http://localhost:7474
 - MinIO Console：http://localhost:9003
 
+### 7. 知识库量化评测
+
+项目内置一组轻量评测问题，用于量化知识库问答效果、关键词召回和接口耗时。启动后端后运行：
+
+```bash
+cd What-to-eat-today
+python evaluation/evaluate_kb.py
+```
+
+快速抽样运行：
+
+```bash
+python evaluation/evaluate_kb.py --limit 3
+```
+
+评测结果会保存到 `What-to-eat-today/evaluation/results/`，核心指标包括 `pass_rate`、`mean_keyword_recall`、`avg_latency_seconds` 和 `p95_latency_seconds`。
+
 ## 项目结构
 
 ```text

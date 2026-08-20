@@ -6,7 +6,7 @@ import sys
 
 sys.stdout.reconfigure(encoding="utf-8")
 
-API = "http://localhost:8001/api/chat/stream"
+API = "http://localhost:8002/api/chat/stream"
 q = "红烧肉怎么做"
 
 t0 = time.time()

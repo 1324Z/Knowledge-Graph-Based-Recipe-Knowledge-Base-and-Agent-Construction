@@ -8,7 +8,7 @@ session = sys.argv[2] if len(sys.argv) > 2 else "test_status"
 print(f"问题: {query}\n")
 t0 = time.time()
 resp = requests.post(
-    "http://localhost:8001/api/chat/stream",
+    "http://localhost:8002/api/chat/stream",
     json={"message": query, "session_id": session, "stream": True},
     stream=True,
     timeout=120,

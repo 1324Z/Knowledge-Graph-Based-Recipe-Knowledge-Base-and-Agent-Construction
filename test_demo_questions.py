@@ -5,7 +5,7 @@ import json
 import time
 import sys
 
-API = "http://localhost:8001/api/chat"
+API = "http://localhost:8002/api/chat"
 
 QUESTIONS = [
     ("关系推理型", "需要鸡蛋的简单素菜有哪些"),
